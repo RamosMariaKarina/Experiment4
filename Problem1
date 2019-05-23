@@ -1,0 +1,107 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+
+using namespace std;
+
+int addition (int a, int b)
+{
+	int c;
+	c=a+b;
+	return c;
+}
+
+int subtraction (int d, int e)
+{
+	int f;
+	f=d-e;
+	return f;
+}
+
+int multiplication (int g, int h)
+{
+	int i;
+	i=g*h;
+	return i;
+}
+
+int division (int j, int k)
+{
+	int l;
+	l=j/k;
+	return l;
+}
+
+int modulus (int m, int n)
+{
+	int o;
+	o=m % n;
+	return o;
+}
+
+
+int main()
+{
+	int choice, num3, num1, num2, num4;
+	char cont;
+	bool calccode = true;
+	bool loop = true;
+	
+while (calccode)
+{
+
+	
+	cout << "-----------------------------------------------------------" << endl;
+	cout << "             This is a calculator menu." << endl;
+	cout << "1. Add" << endl;
+	cout << "2. Subtract" << endl;
+	cout << "3. Multiply" << endl;
+	cout << "4. Divide" << endl;
+	cout << "5. Modulus" << endl;
+	
+	cout << "Choose a number: "; cin >>choice;
+	cout << "Input your first Integer: "; cin >> num1;
+	cout << "Input your second Integer: "; cin >> num2;
+	
+	switch (choice)
+	{
+	
+		case 1: 
+			num3 = addition (num1, num2);
+			cout << "The result is: " << num3 << endl;
+			break;
+		case 2:
+			num3 = subtraction (num1, num2);
+			cout << "The result is: " << num3 << endl;
+			break;
+		case 3:
+			num3 = multiplication (num1, num2);
+			cout << "The result is: " << num3 << endl;
+			break;
+		case 4:
+			num3 = division (num1, num2);
+			cout << "The result is: " << num3 << endl;
+			break;
+		case 5:
+			num3 = num1 % num2;
+			cout << "The result is: " << num3 << endl;
+			break;
+		default:
+			cout << "Enter a valid integer." << endl;	
+		
+	}
+	cout << "Do you want to continue? Press Y if yes or Any character to exit: " ; cin >> cont;
+	
+	while (loop)
+	{
+	
+		if (cont =='y' || cont =='Y')
+			loop = false;
+		else
+			loop = false, calccode = false;
+	}
+}
+	
+	_getch();
+	return 0;
+}
